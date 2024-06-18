@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "gsn/packages/contracts/src/ERC2771Recipient.sol";
+import "gsn/packages/contracts/src/BaseRelayRecipient.sol";
 import {IOrbAttestation} from "./interfaces/IOrbAttestation.sol";
 
 
 // wrapper contract to call OrbAttestation contract with contract that supports RallyTransact gasless transactions
 
-contract OrbAttestationWrapper is ERC2771Recipient {
+contract OrbAttestationWrapper is BaseRelayRecipient {
+    string public override versionRecipient = "0.0.1+orbattessationwrapper";
     address orbAttestationAddress;
     constructor(address forwarder, address _orbAttestationAddress) {
         _setTrustedForwarder(forwarder);
