@@ -20,4 +20,8 @@ The example app calls the `transfer()` method on the Orb Attestation contract us
 
 An example test transaction showing successful contract execution can be found [here](https://amoy.polygonscan.com/tx/0xf2c4d403424a7d2702c322f4c3a9a46083a13c4994ad221f6032099b75463d40)
 
-Note: there are two examples of supporting RallyTransact with the existing OrbAttestation contract. 1. `contracts/src/OrbAttestationWrapper` a wrapper contract that wraps the existing contract with a contract that supports RallyTransact 2. `contracts/src/OrbAttestationRallyTransact.sol` a contract that extends the existing Orb Attestation contract to support RallyTransact.
+Note: there are two examples of supporting RallyTransact with the existing OrbAttestation contract.
+
+1. `contracts/src/OrbAttestationWrapper` a wrapper contract that wraps the existing contract with a contract that supports RallyTransact
+
+2. `contracts/src/OrbAttestationRallyTransact.sol` a contract that extends the existing Orb Attestation contract to support RallyTransact.
